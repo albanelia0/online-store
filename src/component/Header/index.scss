@@ -1,0 +1,19 @@
+.container {
+  background: var(--color-white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 20px;
+
+  &__img {
+    width: 178px;
+  }
+}
+
+.line {
+  background: var(--color-background);
+  height: 10px;
+}
