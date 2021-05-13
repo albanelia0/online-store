@@ -1,0 +1,33 @@
+.cart {
+  display: flex;
+  align-items: center;
+  &__img{
+    height: 18px;
+    position: relative;
+  }
+  &__smallPrice {
+    background: black;
+    border-radius: 50px;
+    border: 1px solid black;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    right: 194px;
+    text-align: center;
+    top: 45px;
+    width: 10px;
+  }
+
+  &__containerTitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+  }
+  &__price {
+    color: var(--color-gray);
+    font-size: 12px;
+  }
+  &__title {
+    font-size: 12px;
+  }
+}

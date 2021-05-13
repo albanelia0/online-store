@@ -1,3 +1,4 @@
+import Cart from "../Cart"
 import Layout from "../Layout"
 import "./index.scss"
 
@@ -11,9 +12,7 @@ const Header = () => {
             className="header__img"
             src="/img/patterson-agency-logo.png"
           />
-          <div>
-            <p>hola</p>
-          </div>
+          <Cart/>
         </div>
       </Layout>
       <div className="line"/>
