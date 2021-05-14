@@ -1,6 +1,15 @@
-.productsContainer {
+.products-container {
   background: var(--color-background);
   height: 100vh;
+
+  & .header-container {
+    &__title {
+      font-weight: 600;
+      margin: 0;
+      padding-bottom: 30px;
+      padding-top: 10px;
+    }
+  }
   & .products {
     display: flex;
     justify-content: space-between;

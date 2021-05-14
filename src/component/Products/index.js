@@ -15,8 +15,11 @@ const Products = () => {
 
   console.log(products)
   return (
-    <div className="productsContainer">
+    <div className="products-container">
       <Layout>
+        <div className="header-container">
+          <h3 className="header-container__title">Productos Destacados</h3>
+        </div>
         <div className="products">
           {products?.map(({id, image, title, price }) => {
             return (
