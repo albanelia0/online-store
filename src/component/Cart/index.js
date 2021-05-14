@@ -1,8 +1,16 @@
+import { useHistory } from 'react-router-dom'
+
 import "./index.scss"
 
 const Cart = () => {
+
+  const history = useHistory()
+
+  const handleOnClick = () => {
+    history.push("/cesta")
+  }
   return (
-    <div className="cart">
+    <div className="cart" onClick={handleOnClick}>
       <div className="cart__containerImg">
         <img className="cart__img" src="/img/carrito.svg" alt="carrito"/>
         <span className="cart__smallPrice">0</span>
