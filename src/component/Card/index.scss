@@ -33,7 +33,7 @@
     &__button-img {
       margin-right: 5px;
     }
-    &__button-style {
+    &--button-style {
       border: none;
       border-radius: 5px;
       line-height: 1;
@@ -49,6 +49,11 @@
     }
     &__eyes {
       height: 20px;
+    }
+    &__start {
+      position: absolute;
+      bottom: 75px;
+      margin-left: 5px;
     }
   }
 }

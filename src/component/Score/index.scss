@@ -1,0 +1,10 @@
+.score {
+
+  &__container {
+    display: flex;
+
+    & img {
+     height: 15px;
+    }
+  }
+}
