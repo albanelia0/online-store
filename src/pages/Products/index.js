@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import Breadcrumbs from "../Breadcrumbs"
-import Card from "../Card"
-import Layout from "../Layout"
+import Breadcrumbs from "../../component/Breadcrumbs"
+import Card from "../../component/Card"
+import Layout from "../../component/Layout"
 
 import "./index.scss"
 
@@ -14,7 +14,6 @@ const Products = () => {
       .then(setProducts)
   }, [])
 
-  console.log(products)
   return (
     <div className="products-container">
       <Layout>
