@@ -3,11 +3,13 @@
   height: 100vh;
 
   & .header-container {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
     &__title {
       font-weight: 600;
       margin: 0;
       padding-bottom: 30px;
-      padding-top: 10px;
     }
   }
   & .products {

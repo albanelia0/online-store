@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Breadcrumbs from "../Breadcrumbs"
 import Card from "../Card"
 import Layout from "../Layout"
 
@@ -19,6 +20,7 @@ const Products = () => {
       <Layout>
         <div className="header-container">
           <h3 className="header-container__title">Productos Destacados</h3>
+          <Breadcrumbs/>
         </div>
         <div className="products">
           {products?.map(({id, image, title, price }) => {

@@ -1,0 +1,15 @@
+.breadcrumbs {
+  display: flex;
+
+  &__container:first-child {
+    color: var(--color-gray-light);
+  }
+  &__title {
+    font-size: 11px;
+    margin: 10px;
+  }
+  &__slash {
+    color: black;
+    font-size: 12px;
+  }
+}
