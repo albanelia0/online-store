@@ -5,7 +5,13 @@
   width: 230px;
   height: 376px;
   justify-content: space-between;
+  position: relative;
 
+  &:hover {
+    & .cart-wrapper {
+      display: block;
+    }
+  }
   &__img {
     height: 308px;
   }
@@ -16,5 +22,33 @@
   &__price {
     font-size: 13px;
     font-weight: bold;
+  }
+
+  & .cart-wrapper {
+    position: absolute;
+    right: 78px;
+    top: 141px;
+    display: none;
+
+    &__button-img {
+      margin-right: 5px;
+    }
+    &__button-style {
+      border: none;
+      border-radius: 5px;
+      line-height: 1;
+      padding: 7px;
+      width: 42px;
+      cursor: pointer;
+      &:hover {
+        background: var(--color-gray-light);
+      }
+    }
+    &__img {
+      height: 20px;
+    }
+    &__eyes {
+      height: 20px;
+    }
   }
 }
