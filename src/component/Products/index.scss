@@ -1,0 +1,8 @@
+.productsContainer {
+  background: var(--color-background);
+  height: 100vh;
+  & .products {
+    display: flex;
+    justify-content: space-between;
+  }
+}

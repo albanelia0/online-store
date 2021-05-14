@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 230px;
+  height: 376px;
+  justify-content: space-between;
+
+  &__img {
+    height: 308px;
+  }
+  &__title {
+    font-size: 13px;
+    color: var(--color-brown);
+  }
+  &__price {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
