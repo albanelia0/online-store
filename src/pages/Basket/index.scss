@@ -2,7 +2,12 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  min-height: 300px;
   &__line {
     border: 2px solid var(--color-background)
+  }
+
+  &__form {
+    margin-top: 40px;
   }
 }

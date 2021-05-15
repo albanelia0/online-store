@@ -1,0 +1,22 @@
+.simple-form {
+  display: flex;
+  justify-content: space-around;
+
+  &__label {
+    color: var(--color-text);
+    font-weight: 300;
+    width: 107px;
+  }
+  &__input {
+    width: 150px;
+    height: 37px;
+    border: 1.5px solid var(--color-background);
+  }
+  &__button {
+    background: var(--color-black);
+    color: var(--color-white);
+    width: 110px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
