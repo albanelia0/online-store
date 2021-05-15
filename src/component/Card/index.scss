@@ -3,7 +3,7 @@
   flex-direction: column;
   margin: 5px;
   width: 230px;
-  height: 376px;
+  height: 300px;
   justify-content: space-between;
   position: relative;
 
@@ -12,22 +12,30 @@
       display: block;
     }
   }
+  &__img-container {
+    height: 250px;
+    width: 200px;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &__img {
-    height: 308px;
+    width: 128px;
   }
   &__title {
-    font-size: 13px;
+    font-size: 11px;
     color: var(--color-brown);
   }
   &__price {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
   }
 
   & .cart-wrapper {
     position: absolute;
     right: 78px;
-    top: 141px;
+    top: 97px;
     display: none;
 
     &__button-img {
@@ -50,9 +58,9 @@
     &__eyes {
       height: 20px;
     }
-    &__start {
+    &__star {
       position: absolute;
-      bottom: 75px;
+      bottom: 60px;
       margin-left: 5px;
     }
   }

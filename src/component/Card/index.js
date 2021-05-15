@@ -4,7 +4,9 @@ import "./index.scss"
 const Card = ({title, price, imgSrc, handleToAddItemToCart}) => {
   return (
     <div className="card">
-      <img alt="card" className="card__img" src={imgSrc} />
+      <div className="card__img-container">
+        <img alt="card" className="card__img" src={imgSrc} />
+      </div>
       <span className="card__title">{title}</span>
       <span className="card__price">{price}</span>
       <div className="cart-wrapper">
