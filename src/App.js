@@ -1,18 +1,21 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Basket from "./pages/Basket"
 import Header from './component/Header';
-import Products from './component/Products';
+import Basket from "./pages/Basket"
+import Products from './pages/Products';
 
 import './App.scss';
+import CartStoreContext from './CartStoreContext';
 
 function App() {
-  return (
+ return (
     <Router>
       <Header/>
-      <Switch>
-        <Route exact path="/" component={Products} />
-        <Route path="/cesta" component={Basket}/>
-      </Switch>
+      <CartStoreContext.Provider>
+        <Switch>
+          <Route exact path="/" component={Products} />
+          <Route path="/cesta" component={Basket}/>
+        </Switch>
+      </CartStoreContext.Provider>
     </Router>
   );
 }

@@ -1,18 +1,15 @@
-import { useState, useEffect } from "react"
+import {useContext } from "react"
 import Breadcrumbs from "../../component/Breadcrumbs"
 import Card from "../../component/Card"
 import Layout from "../../component/Layout"
 
+import { Context } from "../../CartStoreContext"
+
 import "./index.scss"
 
 const Products = () => {
-  const [products, setProducts] = useState()
 
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=4')
-      .then(res=> res.json())
-      .then(setProducts)
-  }, [])
+  const { products } = useContext(Context)
 
   return (
     <div className="products-container">
