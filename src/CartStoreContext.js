@@ -21,6 +21,13 @@ const Provider = ({children}) => {
     })
   }
 
+  const handleToDeleteItem = (idToDelete) => {
+    const newValue = itemsAdded.items.filter(({id}) => id !== idToDelete)
+    setItemsAdded(({count}) => {
+      return ({count: count - 1, items: [...newValue] })
+    })
+  }
+
   const handleToSumTotalPrice = () => {
     const { items } = itemsAdded
     return items.reduce((accumulator, {price}) =>
@@ -34,7 +41,8 @@ const Provider = ({children}) => {
     setProducts,
     itemsAdded,
     handleToAddItemToCart,
-    handleToSumTotalPrice
+    handleToSumTotalPrice,
+    handleToDeleteItem
   }
   return <Context.Provider value={value}>{children}</Context.Provider>
 }

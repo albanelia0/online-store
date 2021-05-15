@@ -44,8 +44,8 @@ const Products = () => {
           >
           {products?.map(({id, image, title, price }) => {
             return (
-              <SwiperSlide>
-                <div key={id}>
+              <SwiperSlide key={id}>
+                <div>
                     <Card
                       handleToAddItemToCart={() => handleToAddItemToCart({id, image, title, price })}
                       title={title}

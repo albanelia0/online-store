@@ -8,14 +8,14 @@ import "./index.scss"
 import Resume from "../../component/Resume"
 
 const Basket = () => {
-  const { itemsAdded, handleToSumTotalPrice } = useContext(Context)
+  const { itemsAdded, handleToSumTotalPrice, handleToDeleteItem } = useContext(Context)
 
   const totalPrice = handleToSumTotalPrice()
 
   return (
     <Layout>
       <div className="cart-wrapper">
-        <CartItems allItems={itemsAdded.items}/>
+        <CartItems handleToDeleteItem={handleToDeleteItem} allItems={itemsAdded.items}/>
         <div>
           <Resume count={itemsAdded.count} price={totalPrice} />
         </div>
