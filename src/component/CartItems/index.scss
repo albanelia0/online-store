@@ -1,0 +1,33 @@
+.cart-products {
+  width: 776px;
+  border: 1.5px solid var(--color-background);
+  border-top: 3px solid var(--color-background);
+
+  &__container {
+    margin: 25px;
+  }
+  &__content {
+    align-items: end;
+    color: var(--color-text);
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__img {
+    height: 100px;
+  }
+  &__title {
+    margin: 15px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+  &__line {
+    border-bottom: 1px solid var(--color-background);
+  }
+  &__button {
+    border:none;
+    background: transparent;
+    font-size: 10px;
+  }
+}
