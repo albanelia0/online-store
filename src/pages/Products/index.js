@@ -9,7 +9,7 @@ import "./index.scss"
 
 const Products = () => {
 
-  const { products } = useContext(Context)
+  const { products, handleToAddItemToCart } = useContext(Context)
 
   return (
     <div className="products-container">
@@ -23,6 +23,7 @@ const Products = () => {
             return (
               <div key={id}>
                 <Card
+                  handleToAddItemToCart={() => handleToAddItemToCart({id, image, title, price })}
                   title={title}
                   imgSrc={image}
                   price={price}

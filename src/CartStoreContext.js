@@ -12,11 +12,20 @@ const Provider = ({children}) => {
       .then(setProducts)
   }, [])
 
+  const handleToAddItemToCart = ({id, image, title, price }) => {
+    const item = {id, image, title, price}
+    if (itemsAdded.items.find(item => item.id === id)) return
+
+    setItemsAdded(({count, items}) => {
+      return ({count: count + 1, items: [...items, item] })
+    })
+  }
+
   const value = {
     products,
     setProducts,
     itemsAdded,
-    setItemsAdded,
+    handleToAddItemToCart
   }
   return <Context.Provider value={value}>{children}</Context.Provider>
 }
