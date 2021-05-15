@@ -9,8 +9,8 @@ import CartStoreContext from './CartStoreContext';
 function App() {
  return (
     <Router>
-      <Header/>
       <CartStoreContext.Provider>
+        <Header/>
         <Switch>
           <Route exact path="/" component={Products} />
           <Route path="/cesta" component={Basket}/>

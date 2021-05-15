@@ -21,11 +21,20 @@ const Provider = ({children}) => {
     })
   }
 
+  const handleToSumTotalPrice = () => {
+    const { items } = itemsAdded
+    return items.reduce((accumulator, {price}) =>
+    {
+      return accumulator + price
+    }, 0)
+  }
+
   const value = {
     products,
     setProducts,
     itemsAdded,
-    handleToAddItemToCart
+    handleToAddItemToCart,
+    handleToSumTotalPrice
   }
   return <Context.Provider value={value}>{children}</Context.Provider>
 }

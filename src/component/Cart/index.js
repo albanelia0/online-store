@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom'
 
 import "./index.scss"
 
-const Cart = () => {
+const Cart = ({count = 0, value = "0,0"}) => {
 
   const history = useHistory()
 
@@ -13,10 +13,10 @@ const Cart = () => {
     <div className="cart" onClick={handleOnClick}>
       <div className="cart__containerImg">
         <img className="cart__img" src="/img/carrito.svg" alt="carrito"/>
-        <span className="cart__smallPrice">0</span>
+        <span className="cart__smallPrice">{count}</span>
       </div>
       <div className="cart__containerTitle">
-        <span className="cart__price">0,00</span>
+        <span className="cart__price">{value}</span>
         <span className="cart__title">Mi carrito </span>
       </div>
     </div>
