@@ -1,4 +1,8 @@
 .cart-wrapper {
   display: flex;
+  justify-content: space-between;
   margin-top: 20px;
+  &__line {
+    border: 2px solid var(--color-background)
+  }
 }

@@ -5,15 +5,19 @@ import { Context } from "../../CartStoreContext"
 import Layout from "../../component/Layout"
 
 import "./index.scss"
+import Resume from "../../component/Resume"
 
 const Basket = () => {
-  const { itemsAdded } = useContext(Context)
+  const { itemsAdded, handleToSumTotalPrice } = useContext(Context)
+
+  const totalPrice = handleToSumTotalPrice()
+
   return (
     <Layout>
       <div className="cart-wrapper">
         <CartItems allItems={itemsAdded.items}/>
         <div>
-          Resumen del carrito
+          <Resume count={itemsAdded.count} price={totalPrice} />
         </div>
       </div>
     </Layout>
