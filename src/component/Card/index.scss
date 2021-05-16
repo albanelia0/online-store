@@ -1,4 +1,6 @@
 .card {
+  $self: &;
+
   display: flex;
   flex-direction: column;
   width: 230px;
@@ -6,11 +8,10 @@
   justify-content: space-between;
   position: relative;
 
-  &:hover {
-    & .cart-wrapper {
-      display: block;
-    }
+  &:hover .cart-wrapper {
+    display: block;
   }
+
   &__img-container {
     height: 250px;
     width: 200px;
@@ -18,20 +19,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    #{$self}__star {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+    }
   }
+
   &__img {
     width: 128px;
   }
+
   &__title {
     font-size: 11px;
     color: var(--color-brown);
   }
+
   &__price {
     font-size: 12px;
     font-weight: bold;
   }
 
-  & .cart-wrapper {
+  .cart-wrapper {
     position: absolute;
     right: 78px;
     top: 97px;
@@ -40,6 +51,7 @@
     &__button-img {
       margin-right: 5px;
     }
+
     &--button-style {
       border: none;
       border-radius: 5px;
@@ -51,16 +63,13 @@
         background: var(--color-gray-light);
       }
     }
+
     &__img {
       height: 20px;
     }
+
     &__eyes {
       height: 20px;
-    }
-    &__star {
-      position: absolute;
-      bottom: 60px;
-      margin-left: 5px;
     }
   }
 }

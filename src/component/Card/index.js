@@ -6,6 +6,9 @@ const Card = ({ title, price, imgSrc, handleToAddItemToCart }) => {
     <div className='card'>
       <div className='card__img-container'>
         <img alt='card' className='card__img' src={imgSrc} />
+        <div className='card__star'>
+          <Score units={3} />
+        </div>
       </div>
       <span className='card__title'>{title}</span>
       <span className='card__price'>{price}</span>
@@ -16,9 +19,6 @@ const Card = ({ title, price, imgSrc, handleToAddItemToCart }) => {
         <button className='cart-wrapper__button-eyes cart-wrapper--button-style'>
           <img className='cart-wrapper__eyes' alt='ojo' src='/img/ojo.svg' />
         </button>
-      </div>
-      <div className='cart-wrapper__start'>
-        <Score units={3} />
       </div>
     </div>
   )
