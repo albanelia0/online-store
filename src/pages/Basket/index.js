@@ -9,14 +9,14 @@ import Resume from '../../component/Resume'
 import SimpleForm from '../../component/SimpleForm'
 
 const Basket = () => {
-  const { itemsAdded, handleToSumTotalPrice, handleToDeleteItem } = useContext(Context)
+  const { itemsAdded, sumTotalPrice, deleteItem } = useContext(Context)
 
-  const totalPrice = handleToSumTotalPrice()
+  const totalPrice = sumTotalPrice()
 
   return (
     <Layout>
       <div className='cart-wrapper'>
-        <CartItems handleToDeleteItem={handleToDeleteItem} allItems={itemsAdded.items} />
+        <CartItems deleteItem={deleteItem} allItems={itemsAdded.items} />
         <div className='cart-wrapper__resume-container'>
           <Resume count={itemsAdded.count} price={totalPrice} />
           <div className='cart-wrapper__form'>

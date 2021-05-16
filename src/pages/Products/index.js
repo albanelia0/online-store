@@ -24,7 +24,9 @@ import SwiperCore, {
 SwiperCore.use([Pagination, Navigation])
 
 const Products = () => {
-  const { products, handleToAddItemToCart } = useContext(Context)
+  const { products, addItem } = useContext(Context)
+
+  if (!products?.length) return null
 
   return (
     <div className='products-container'>
@@ -50,7 +52,7 @@ const Products = () => {
                 <SwiperSlide key={id}>
                   <div>
                     <Card
-                      handleToAddItemToCart={() => handleToAddItemToCart({ id, image, title, price })}
+                      handleToAddItemToCart={() => addItem({ id, image, title, price })}
                       title={title}
                       imgSrc={image}
                       price={price}

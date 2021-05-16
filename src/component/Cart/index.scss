@@ -1,22 +1,25 @@
 .cart {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   &__img{
-    height: 18px;
+    height: 21px;
+  }
+  &__containerImg {
     position: relative;
   }
-  &__smallPrice {
+  &__count {
     background: black;
     border-radius: 50px;
     border: 1px solid black;
     color: white;
-    font-size: 10px;
+    font-size: 13px;
     position: absolute;
-    right: 194px;
+    right: -5px;
     text-align: center;
-    top: 45px;
-    width: 10px;
+    top: -5px;
+    width: 12px;
   }
 
   &__containerTitle {
@@ -29,6 +32,6 @@
     font-size: 12px;
   }
   &__title {
-    font-size: 12px;
+    font-size: 15px;
   }
 }

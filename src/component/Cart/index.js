@@ -12,7 +12,7 @@ const Cart = ({ count = 0, value = '0,0' }) => {
     <div className='cart' onClick={handleOnClick}>
       <div className='cart__containerImg'>
         <img className='cart__img' src='/img/carrito.svg' alt='carrito' />
-        <span className='cart__smallPrice'>{count}</span>
+        <span className='cart__count'>{count}</span>
       </div>
       <div className='cart__containerTitle'>
         <span className='cart__price'>{value}</span>

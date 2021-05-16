@@ -1,6 +1,6 @@
 import './index.scss'
 
-const CartItems = ({ allItems, handleToDeleteItem }) => {
+const CartItems = ({ allItems, deleteItem }) => {
   return (
     <div className='cart-products'>
       <h3 className='cart-products__title'>CARRITO</h3>
@@ -10,9 +10,9 @@ const CartItems = ({ allItems, handleToDeleteItem }) => {
           return (
             <div key={id} className='cart-products__content'>
               <img className='cart-products__img' alt='product' src={image} />
-              <span>{title}</span>
-              <span>{price}</span>
-              <button onClick={() => handleToDeleteItem(id)} className='cart-products__button'>🗑</button>
+              <span className='cart-products__item-title'>{title}</span>
+              <span className='cart-products__item-price'>{price}</span>
+              <button onClick={() => deleteItem(id)} className='cart-products__button'>🗑</button>
             </div>
           )
         })}

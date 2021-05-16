@@ -12,7 +12,7 @@ const Provider = ({ children }) => {
       .then(setProducts)
   }, [])
 
-  const handleToAddItemToCart = ({ id, image, title, price }) => {
+  const addItem = ({ id, image, title, price }) => {
     const item = { id, image, title, price }
     if (itemsAdded.items.find(item => item.id === id)) return
 
@@ -21,14 +21,14 @@ const Provider = ({ children }) => {
     })
   }
 
-  const handleToDeleteItem = (idToDelete) => {
+  const deleteItem = (idToDelete) => {
     const newValue = itemsAdded.items.filter(({ id }) => id !== idToDelete)
     setItemsAdded(({ count }) => {
       return ({ count: count - 1, items: [...newValue] })
     })
   }
 
-  const handleToSumTotalPrice = () => {
+  const sumTotalPrice = () => {
     const { items } = itemsAdded
     return items.reduce((accumulator, { price }) => {
       return accumulator + price
@@ -39,14 +39,13 @@ const Provider = ({ children }) => {
     products,
     setProducts,
     itemsAdded,
-    handleToAddItemToCart,
-    handleToSumTotalPrice,
-    handleToDeleteItem
+    addItem,
+    sumTotalPrice,
+    deleteItem
   }
   return <Context.Provider value={value}>{children}</Context.Provider>
 }
 
 export default {
-  Provider,
-  Consumer: Context.Consumer
+  Provider
 }

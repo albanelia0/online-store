@@ -7,10 +7,10 @@ import Layout from '../Layout'
 import './index.scss'
 
 const Header = () => {
-  const { itemsAdded, handleToSumTotalPrice } = useContext(Context)
+  const { itemsAdded, sumTotalPrice } = useContext(Context)
 
   const history = useHistory()
-  const totalPrice = handleToSumTotalPrice()
+  const totalPrice = sumTotalPrice()
 
   const handleOnLogoClick = () => {
     history.push('/')

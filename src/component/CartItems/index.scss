@@ -1,5 +1,5 @@
 .cart-products {
-  width: 776px;
+  width: 626px;
   border: 1.5px solid var(--color-background);
   border-top: 3px solid var(--color-background);
 
@@ -15,7 +15,15 @@
     margin-bottom: 20px;
   }
   &__img {
-    height: 100px;
+    height: 136px;
+  }
+  &__item-price {
+    width: 100px;
+    font-size: 16px;
+  }
+  &__item-title {
+    width: 160px;
+    font-size: 16px;
   }
   &__title {
     margin: 15px;
