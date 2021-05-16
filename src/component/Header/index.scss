@@ -1,20 +1,20 @@
-.container {
-  background: var(--color-white);
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   padding-top: 23px;
   padding-bottom: 20px;
 
+  &__container {
+    background: var(--color-white);
+  }
+
   &__img {
     width: 178px;
     cursor: pointer;
   }
-}
 
-.line {
-  background: var(--color-background);
-  height: 10px;
+  &__line {
+    background: var(--color-background);
+    height: 10px;
+  }
 }

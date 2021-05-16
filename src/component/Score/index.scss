@@ -3,8 +3,8 @@
   &__container {
     display: flex;
 
-    & img {
-     height: 15px;
-    }
+  }
+  &__star {
+   height: 15px;
   }
 }

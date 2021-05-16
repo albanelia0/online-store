@@ -18,7 +18,7 @@ const Card = ({title, price, imgSrc, handleToAddItemToCart}) => {
         </button>
       </div>
       <div className="cart-wrapper__start">
-        <Score units="3"/>
+        <Score units={3} />
       </div>
     </div>
   )

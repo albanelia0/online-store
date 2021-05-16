@@ -16,7 +16,7 @@ const Header = () => {
     history.push("/")
   }
   return (
-    <div className="container">
+    <div className="header__container">
       <Layout>
         <div className="header">
           <img
@@ -28,7 +28,7 @@ const Header = () => {
           <Cart count={itemsAdded.count} value={totalPrice.toFixed(2)} />
         </div>
       </Layout>
-      <div className="line"/>
+      <div className="header__line"/>
     </div>
   )
 }
