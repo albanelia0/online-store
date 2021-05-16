@@ -60,9 +60,9 @@ const Products = () => {
                 </SwiperSlide>
               )
             })}
-            <button className="products-page__slider-prev"><LeftIcon /></button>
-            <button className="products-page__slider-next"><RightIcon /></button>
           </Swiper>
+          <button className="products-page__slider-prev"><LeftIcon /></button>
+          <button className="products-page__slider-next"><RightIcon /></button>
         </div>
       </Layout>
     </div>

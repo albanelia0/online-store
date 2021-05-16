@@ -3,9 +3,9 @@
   &__slider-next {
     position: absolute;
     top: 0;
-    bottom: 0;
-    height: 40px;
-    width: 40px;
+    bottom: 38px;
+    height: 30px;
+    width: 30px;
     margin: auto;
     z-index: 100;
     border: none;
@@ -14,12 +14,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   &__slider-prev {
-    left: 0;
+    left: -50px;
   }
   &__slider-next {
-    right: 0;
+    right: -50px;
   }
 }
 
@@ -39,6 +40,7 @@
     }
   }
   .products {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
