@@ -29,13 +29,13 @@ const Products = () => {
   if (!products?.length) return null
 
   return (
-    <div className='products-container'>
+    <div className='products-page'>
       <Layout>
-        <div className='header-container'>
-          <h3 className='header-container__title'>Productos Destacados</h3>
+        <div className='products-page__header'>
+          <h3 className='products-page__header-title'>Productos Destacados</h3>
           <Breadcrumbs />
         </div>
-        <div className='products'>
+        <div className='products-page__products'>
           <Swiper
             slidesPerView={4}
             spaceBetween={105}
