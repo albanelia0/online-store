@@ -1,5 +1,7 @@
 import {useContext } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
+import {ReactComponent as LeftIcon} from './icons/chevron-left.svg'
+import {ReactComponent as RightIcon} from './icons/chevron-right.svg'
 
 import Breadcrumbs from "../../component/Breadcrumbs"
 import Card from "../../component/Card"
@@ -37,25 +39,29 @@ const Products = () => {
             slidesPerView={4}
             spaceBetween={105}
             slidesPerGroup={1}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            navigation={true}
-            className="mySwiper"
+            loop
+            loopFillGroupWithBlank
+            navigation={{
+              prevEl: '.products-page__slider-prev',
+              nextEl: '.products-page__slider-next'
+            }}
           >
-          {products?.map(({id, image, title, price }) => {
-            return (
-              <SwiperSlide key={id}>
-                <div>
-                    <Card
-                      handleToAddItemToCart={() => handleToAddItemToCart({id, image, title, price })}
-                      title={title}
-                      imgSrc={image}
-                      price={price}
-                    />
-                </div>
-              </SwiperSlide>
-            )
-          })}
+            {products?.map(({id, image, title, price }) => {
+              return (
+                <SwiperSlide key={id}>
+                  <div>
+                      <Card
+                        handleToAddItemToCart={() => handleToAddItemToCart({id, image, title, price })}
+                        title={title}
+                        imgSrc={image}
+                        price={price}
+                      />
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+            <button className="products-page__slider-prev"><LeftIcon /></button>
+            <button className="products-page__slider-next"><RightIcon /></button>
           </Swiper>
         </div>
       </Layout>
