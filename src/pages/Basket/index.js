@@ -5,7 +5,7 @@ import { Context } from '../../CartStoreContext'
 import Layout from '../../component/Layout'
 
 import './index.scss'
-import Resume from '../../component/Resume'
+import Summary from '../../component/Summary'
 import SimpleForm from '../../component/SimpleForm'
 
 const Basket = () => {
@@ -17,8 +17,8 @@ const Basket = () => {
     <Layout>
       <div className='cart-wrapper'>
         <CartItems deleteItem={deleteItem} allItems={itemsAdded.items} />
-        <div className='cart-wrapper__resume-container'>
-          <Resume count={itemsAdded.count} price={totalPrice} />
+        <div className='cart-wrapper__summary-container'>
+          <Summary count={itemsAdded.count} price={totalPrice} />
           <div className='cart-wrapper__form'>
             <SimpleForm />
           </div>
