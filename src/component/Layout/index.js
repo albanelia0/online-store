@@ -1,8 +1,8 @@
-import "./index.scss";
+import './index.scss'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div className="wrapper">{children}</div>
+    <div className='wrapper'>{children}</div>
   )
 }
 

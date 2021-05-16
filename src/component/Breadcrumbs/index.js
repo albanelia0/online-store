@@ -1,15 +1,14 @@
-import "./index.scss"
+import './index.scss'
 
 const Breadcrumbs = () => {
-
-  const breadcrumbsRoutes = ["Todos los productos", "Cocina", "Productos destacados"]
+  const breadcrumbsRoutes = ['Todos los productos', 'Cocina', 'Productos destacados']
 
   return (
-    <div className="breadcrumbs">
+    <div className='breadcrumbs'>
       {breadcrumbsRoutes.map((breadcrumb, index) => (
-        <div key={index} className="breadcrumbs__container">
-          <span className="breadcrumbs__title">{breadcrumb}</span>
-          {index < breadcrumbsRoutes.length - 1 &&<span className="breadcrumbs__slash">/</span> }
+        <div key={index} className='breadcrumbs__container'>
+          <span className='breadcrumbs__title'>{breadcrumb}</span>
+          {index < breadcrumbsRoutes.length - 1 && <span className='breadcrumbs__slash'>/</span>}
         </div>
       ))}
     </div>

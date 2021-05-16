@@ -1,37 +1,36 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react'
 
-export const Context = createContext();
+export const Context = createContext()
 
-const Provider = ({children}) => {
+const Provider = ({ children }) => {
   const [products, setProducts] = useState()
-  const [itemsAdded, setItemsAdded] = useState({count: 0, items: []})
+  const [itemsAdded, setItemsAdded] = useState({ count: 0, items: [] })
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=4')
-      .then(res=> res.json())
+    window.fetch('https://fakestoreapi.com/products?limit=4')
+      .then(res => res.json())
       .then(setProducts)
   }, [])
 
-  const handleToAddItemToCart = ({id, image, title, price }) => {
-    const item = {id, image, title, price}
+  const handleToAddItemToCart = ({ id, image, title, price }) => {
+    const item = { id, image, title, price }
     if (itemsAdded.items.find(item => item.id === id)) return
 
-    setItemsAdded(({count, items}) => {
-      return ({count: count + 1, items: [...items, item] })
+    setItemsAdded(({ count, items }) => {
+      return ({ count: count + 1, items: [...items, item] })
     })
   }
 
   const handleToDeleteItem = (idToDelete) => {
-    const newValue = itemsAdded.items.filter(({id}) => id !== idToDelete)
-    setItemsAdded(({count}) => {
-      return ({count: count - 1, items: [...newValue] })
+    const newValue = itemsAdded.items.filter(({ id }) => id !== idToDelete)
+    setItemsAdded(({ count }) => {
+      return ({ count: count - 1, items: [...newValue] })
     })
   }
 
   const handleToSumTotalPrice = () => {
     const { items } = itemsAdded
-    return items.reduce((accumulator, {price}) =>
-    {
+    return items.reduce((accumulator, { price }) => {
       return accumulator + price
     }, 0)
   }
@@ -49,5 +48,5 @@ const Provider = ({children}) => {
 
 export default {
   Provider,
-  Consumer: Context.Consumer,
-};
+  Consumer: Context.Consumer
+}
