@@ -23,7 +23,7 @@ const Header = () => {
             onClick={handleOnLogoClick}
             alt='patterson-agency-logo'
             className='header__img'
-            src='/img/patterson-agency-logo.png'
+            src='/img/logo.jpeg'
           />
           <Cart count={itemsAdded.count} value={totalPrice.toFixed(2)} />
         </div>
